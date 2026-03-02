@@ -1,8 +1,20 @@
 import { Container } from "@/components/layout/container";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Eyebrow, Heading, Subheading } from "@/components/ui/typography";
 
-const services = [
+type Service = {
+  title: string;
+  description: string;
+  details: string[];
+};
+
+const services: Service[] = [
   {
     title: "Bemutatkozó céges oldal",
     description:
@@ -25,7 +37,10 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="services" className="border-b border-border/60 bg-background py-16 md:py-20">
+    <section
+      id="services"
+      className="border-b border-border/60 bg-primary/5 py-16 md:py-20"
+    >
       <Container className="space-y-10">
         <div className="space-y-4">
           <Eyebrow>Szolgáltatások</Eyebrow>

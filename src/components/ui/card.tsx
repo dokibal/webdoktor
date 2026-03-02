@@ -1,9 +1,9 @@
 import type { HTMLAttributes, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-export interface CardProps extends HTMLAttributes<HTMLDivElement> {
+export type CardProps = HTMLAttributes<HTMLDivElement> & {
   children: ReactNode;
-}
+};
 
 export function Card({ className, children, ...props }: CardProps) {
   return (
@@ -19,11 +19,15 @@ export function Card({ className, children, ...props }: CardProps) {
   );
 }
 
-export interface CardHeaderProps extends HTMLAttributes<HTMLDivElement> {
+export type CardHeaderProps = HTMLAttributes<HTMLDivElement> & {
   children: ReactNode;
-}
+};
 
-export function CardHeader({ className, children, ...props }: CardHeaderProps) {
+export function CardHeader({
+  className,
+  children,
+  ...props
+}: CardHeaderProps) {
   return (
     <div className={cn("mb-4 flex flex-col gap-1", className)} {...props}>
       {children}
@@ -31,9 +35,9 @@ export function CardHeader({ className, children, ...props }: CardHeaderProps) {
   );
 }
 
-export interface CardTitleProps extends HTMLAttributes<HTMLHeadingElement> {
+export type CardTitleProps = HTMLAttributes<HTMLHeadingElement> & {
   children: ReactNode;
-}
+};
 
 export function CardTitle({ className, children, ...props }: CardTitleProps) {
   return (
@@ -46,10 +50,9 @@ export function CardTitle({ className, children, ...props }: CardTitleProps) {
   );
 }
 
-export interface CardDescriptionProps
-  extends HTMLAttributes<HTMLParagraphElement> {
+export type CardDescriptionProps = HTMLAttributes<HTMLParagraphElement> & {
   children: ReactNode;
-}
+};
 
 export function CardDescription({
   className,
@@ -66,9 +69,9 @@ export function CardDescription({
   );
 }
 
-export interface CardContentProps extends HTMLAttributes<HTMLDivElement> {
+export type CardContentProps = HTMLAttributes<HTMLDivElement> & {
   children: ReactNode;
-}
+};
 
 export function CardContent({
   className,

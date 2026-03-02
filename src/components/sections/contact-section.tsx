@@ -9,7 +9,10 @@ import type { FormEvent } from "react";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="bg-background py-16 md:py-20">
+    <section
+      id="contact"
+      className="bg-secondary/95 py-16 md:py-20 text-secondary-foreground"
+    >
       <Container className="grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:items-start">
         <div className="space-y-4">
           <Eyebrow>Kapcsolat</Eyebrow>
@@ -19,7 +22,7 @@ export function ContactSection() {
             Segítek kereteket adni a projektnek.
           </Subheading>
         </div>
-        <div className="rounded-xl border border-border/80 bg-background/80 p-6 shadow-lg backdrop-blur-sm">
+        <div className="rounded-xl border border-border/40 bg-background p-6 shadow-lg backdrop-blur-sm">
           <ContactForm />
         </div>
       </Container>

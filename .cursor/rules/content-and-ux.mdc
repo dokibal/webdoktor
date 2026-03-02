@@ -1,0 +1,20 @@
+---
+description: Content, language, and UX conventions for the marketing site
+globs: src/components/sections/**/*.tsx
+alwaysApply: false
+---
+
+# Content & UX Guidelines
+
+- All **user-facing copy** on the site should be in **Hungarian**, matching the existing tone:
+  - Professional but approachable, not overly formal or filled with jargon.
+  - Focus on **benefits for the client** (results, clarity, ease) rather than implementation details.
+- When adding new sections or modifying text:
+  - Keep headings short and impactful; details go into `Subheading` or body text.
+  - Avoid over-emphasizing the tech stack; emphasize process, outcomes, and collaboration.
+- The primary flow of the page should guide the user toward **contact / quote request**:
+  - Make sure there is a clear CTA in the hero and at least one more CTA near the bottom.
+- When introducing new components in `sections`:
+  - Reuse existing `Heading`, `Subheading`, `Eyebrow`, `Button`, `Card`, and `Badge` components for consistency.
+  - Keep each section focused on a single story: services, pricing, process, or contact.
+

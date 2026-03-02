@@ -1,11 +1,25 @@
 import { Container } from "@/components/layout/container";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Eyebrow, Heading, Subheading } from "@/components/ui/typography";
 import Link from "next/link";
 
-const tiers = [
+type PricingTier = {
+  name: string;
+  highlight: string;
+  price: string;
+  featured?: boolean;
+  features: string[];
+};
+
+const tiers: PricingTier[] = [
   {
     name: "Starter",
     highlight: "Induló vállalkozásoknak",
@@ -33,7 +47,10 @@ const tiers = [
 
 export function PricingSection() {
   return (
-    <section id="pricing" className="border-b border-border/60 bg-background py-16 md:py-20">
+    <section
+      id="pricing"
+      className="border-b border-border/60 bg-primary/10 py-16 md:py-20"
+    >
       <Container className="space-y-10">
         <div className="space-y-4">
           <Eyebrow>Árak</Eyebrow>

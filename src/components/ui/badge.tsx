@@ -3,10 +3,10 @@ import { cn } from "@/lib/utils";
 
 type BadgeVariant = "default" | "outline";
 
-export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
+export type BadgeProps = HTMLAttributes<HTMLSpanElement> & {
   variant?: BadgeVariant;
   children: ReactNode;
-}
+};
 
 export function Badge({
   variant = "default",

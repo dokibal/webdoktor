@@ -1,0 +1,18 @@
+---
+description: High-level architecture and routing conventions for the Webdoktor site
+alwaysApply: true
+---
+
+# Project Architecture & Routing
+
+- This project is a **Next.js App Router** application using **TypeScript** and lives under `src/app`.
+- The home route `/` is the primary **one-page marketing site**.
+- Prefer structuring pages as **composed sections**:
+  - `src/app/page.tsx` imports section components from `src/components/sections/`.
+  - Section components are responsible only for layout/content of that slice, not global concerns.
+- Keep layout-related components in `src/components/layout/` (e.g. `SiteHeader`, `SiteFooter`, `Container`) and avoid mixing them with feature sections.
+- New pages should:
+  - Use the App Router conventions (folders with `page.tsx`).
+  - Export `metadata` where SEO-relevant.
+  - Reuse existing `sections` and `ui` components wherever possible instead of duplicating markup.
+

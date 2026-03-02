@@ -4,14 +4,13 @@ import { cn } from "@/lib/utils";
 type ButtonVariant = "primary" | "secondary" | "ghost" | "outline" | "link";
 type ButtonSize = "sm" | "md" | "lg";
 
-export interface ButtonProps
-  extends ButtonHTMLAttributes<HTMLButtonElement> {
+export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: ButtonVariant;
   size?: ButtonSize;
   leftIcon?: ReactNode;
   rightIcon?: ReactNode;
   fullWidth?: boolean;
-}
+};
 
 const baseStyles =
   "inline-flex items-center justify-center gap-2 rounded-full border text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary disabled:cursor-not-allowed disabled:opacity-60";

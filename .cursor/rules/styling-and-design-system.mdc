@@ -1,0 +1,19 @@
+---
+description: Tailwind v4 design tokens and UI styling conventions
+globs: src/app/globals.css
+alwaysApply: false
+---
+
+# Styling & Design System
+
+- Styling is driven by **Tailwind v4** with an inline `@theme` block in `globals.css`.
+- Treat the `@theme inline` block as the **single source of truth** for:
+  - `--color-primary`, `--color-secondary`, `--color-accent`, `--color-background`, `--color-foreground`.
+  - Radius scale, shadows, and font families.
+- When changing brand colors:
+  - Update only the relevant `--color-*` tokens in `@theme inline`.
+  - Use Tailwind utilities (`bg-primary`, `text-primary`, `bg-secondary/95`, etc.) instead of hardcoded hex values in components.
+- Use **section background colors** to introduce color, not inline styles:
+  - Alternate between `bg-background`, `bg-primary/5`, `bg-primary/10`, or `bg-secondary/95` for major sections.
+- Avoid writing arbitrary global CSS unless absolutely necessary; prefer Tailwind utilities and the existing tokens.
+

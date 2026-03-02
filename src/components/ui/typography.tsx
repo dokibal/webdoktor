@@ -1,10 +1,10 @@
 import { cn } from "@/lib/utils";
 import type { HTMLAttributes, ReactNode } from "react";
 
-export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
+export type HeadingProps = HTMLAttributes<HTMLHeadingElement> & {
   level?: 1 | 2 | 3;
   children: ReactNode;
-}
+};
 
 export function Heading({
   level = 2,
@@ -46,9 +46,9 @@ export function Heading({
   );
 }
 
-export interface SubheadingProps extends HTMLAttributes<HTMLParagraphElement> {
+export type SubheadingProps = HTMLAttributes<HTMLParagraphElement> & {
   children: ReactNode;
-}
+};
 
 export function Subheading({
   className,
@@ -68,9 +68,9 @@ export function Subheading({
   );
 }
 
-export interface EyebrowProps extends HTMLAttributes<HTMLParagraphElement> {
+export type EyebrowProps = HTMLAttributes<HTMLParagraphElement> & {
   children: ReactNode;
-}
+};
 
 export function Eyebrow({ className, children, ...props }: EyebrowProps) {
   return (

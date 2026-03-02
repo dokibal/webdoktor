@@ -1,0 +1,20 @@
+---
+description: TypeScript, props, and React component conventions for Webdoktor
+globs: src/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# TypeScript & React Patterns
+
+- Use **function components** only; no class components.
+- Prefer **`type` aliases over `interface`** for props and other shapes, to stay consistent with the existing codebase:
+  - `export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & { ... }`
+- For props that extend native HTML attributes:
+  - Compose from the appropriate `HTML*Attributes` type (e.g. `HTMLDivElement`, `HTMLHeadingElement`).
+  - Always include an explicit `children: ReactNode` for components that render arbitrary children.
+- For static data used with `.map` (e.g. pricing tiers, services, steps):
+  - Define a dedicated type (`PricingTier`, `Service`, `ProcessStep`) and type the array, e.g. `const tiers: PricingTier[] = [...]`.
+  - Use stable string keys such as `key={tier.name}` or `key={item}` when mapping.
+- Keep components **presentational** in `src/components/ui` and `src/components/sections`:
+  - No data fetching, no routing logic; only layout, styling, and rendering of given props or local static data.
+

@@ -2,7 +2,12 @@ import { Container } from "@/components/layout/container";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Eyebrow, Heading, Subheading } from "@/components/ui/typography";
 
-const steps = [
+type ProcessStep = {
+  title: string;
+  items: string[];
+};
+
+const steps: ProcessStep[] = [
   {
     title: "1. Rövid beszélgetés",
     items: [
@@ -26,7 +31,7 @@ const steps = [
   },
 ];
 
-export function TechStackSection() {
+export function ProcessSection() {
   return (
     <section
       id="process"
@@ -35,9 +40,9 @@ export function TechStackSection() {
       <Container className="space-y-10">
         <div className="space-y-4">
           <Eyebrow>Hogyan dolgozom</Eyebrow>
-          <Heading>Átlátható, közös munka – technikai zsargon nélkül</Heading>
+          <Heading>Átlátható, közös munka - technikai zsargon nélkül</Heading>
           <Subheading>
-            Nem kell technikai részletekkel foglalkoznod – az a dolgom, hogy a
+            Nem kell technikai részletekkel foglalkoznod - az a dolgom, hogy a
             céljaidat érthető lépésekre bontsam, és végigvigyem a folyamatot az
             első ötlettől az éles, működő oldalig.
           </Subheading>
