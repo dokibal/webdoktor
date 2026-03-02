@@ -11,7 +11,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="bg-secondary/95 py-16 md:py-20 text-secondary-foreground"
+      className="bg-secondary/95 min-h-screen py-16 md:py-20 text-secondary-foreground flex items-center"
     >
       <Container className="grid gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:items-start">
         <div className="space-y-4">

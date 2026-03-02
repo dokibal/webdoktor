@@ -1,9 +1,10 @@
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Container } from "./container";
-import { Button } from "@/components/ui/button";
 
 const navItems: Array<{ href: string; label: string }> = [
   { href: "/#services", label: "Szolgáltatások" },
+  { href: "/#references", label: "Referenciák" },
   { href: "/#pricing", label: "Árak" },
   { href: "/#process", label: "Hogyan dolgozom" },
   { href: "/#contact", label: "Kapcsolat" },
@@ -14,9 +15,12 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-xl">
       <Container className="flex h-16 items-center justify-between gap-4">
         <Link href="/" className="flex items-center gap-2">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-xs font-semibold text-primary">
-            WD
-          </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/webdoktor.webp"
+            alt="Webdoktor logó"
+            className="h-24 w-24 object-contain"
+          />
           <span className="text-sm font-semibold tracking-tight">
             Webdoktor
           </span>

@@ -35,7 +35,7 @@ export function ProcessSection() {
   return (
     <section
       id="process"
-      className="border-b border-border/60 bg-background py-16 md:py-20"
+      className="border-b border-border/60 bg-background min-h-screen py-16 md:py-20 flex items-center"
     >
       <Container className="space-y-10">
         <div className="space-y-4">

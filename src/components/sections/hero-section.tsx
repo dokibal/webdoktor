@@ -1,18 +1,17 @@
 import { Container } from "@/components/layout/container";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Eyebrow, Heading, Subheading } from "@/components/ui/typography";
+import { Heading, Subheading } from "@/components/ui/typography";
 import Link from "next/link";
 
 export function HeroSection() {
   return (
     <section
       id="hero"
-      className="border-b border-border/60 bg-gradient-to-b from-primary/10 via-background to-background py-16 md:py-24"
+      className="border-b border-border/60 bg-gradient-to-b from-primary/10 via-background to-background min-h-screen py-16 md:py-24 flex items-center"
     >
       <Container className="max-w-4xl space-y-8">
         <div className="space-y-8">
-          <Eyebrow>Webdoktor · Webfejlesztő</Eyebrow>
           <div className="space-y-5">
             <Heading level={1}>
               Modern, gyors és{" "}

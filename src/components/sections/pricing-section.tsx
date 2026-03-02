@@ -49,7 +49,7 @@ export function PricingSection() {
   return (
     <section
       id="pricing"
-      className="border-b border-border/60 bg-primary/10 py-16 md:py-20"
+      className="border-b border-border/60 bg-primary/10 min-h-screen py-16 md:py-20 flex items-center"
     >
       <Container className="space-y-10">
         <div className="space-y-4">
