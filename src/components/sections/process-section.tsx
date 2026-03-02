@@ -9,23 +9,23 @@ type ProcessStep = {
 
 const steps: ProcessStep[] = [
   {
-    title: "1. Rövid beszélgetés",
+    title: "Rövid beszélgetés",
     items: [
       "Megismerem az üzleti célodat és a jelenlegi helyzetet.",
       "Átbeszéljük, hogy mire lenne valóban szükség (nem csak mit „kellene lefejleszteni”).",
     ],
   },
   {
-    title: "2. Vázlat & ajánlat",
+    title: "Vázlat & ajánlat",
     items: [
       "Felrajzolom az oldal/szekciók logikus felépítését.",
       "Kapsz egy érthető, átlátható ajánlatot határidővel.",
     ],
   },
   {
-    title: "3. Megvalósítás & finomhangolás",
+    title: "Megvalósítás & finomhangolás",
     items: [
-      "Iteratívan haladunk, több ponton kérhetesz módosítást.",
+      "Iteratívan haladunk, több ponton kérhetsz módosítást.",
       "Élesítés előtt együtt ellenőrizzük: működés, sebesség, mobil nézet.",
     ],
   },
@@ -47,20 +47,27 @@ export function ProcessSection() {
             első ötlettől az éles, működő oldalig.
           </Subheading>
         </div>
-        <div className="grid gap-6 md:grid-cols-3">
-          {steps.map((step) => (
-            <Card key={step.title}>
-              <CardHeader>
-                <CardTitle>{step.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-1 text-sm text-muted">
-                  {step.items.map((item) => (
-                    <li key={item}>• {item}</li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+        <div className="flex flex-col gap-6 md:flex-row md:items-stretch">
+          {steps.map((step, index) => (
+            <div key={step.title} className="flex flex-1 flex-col md:flex-row md:items-stretch">
+              <Card className="flex-1">
+                <CardHeader>
+                  <div className="mb-2 flex items-start gap-3">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-semibold text-primary-foreground md:h-9 md:w-9 md:text-sm">
+                      {index + 1}
+                    </div>
+                    <CardTitle>{step.title}</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-1 text-sm text-muted">
+                    {step.items.map((item) => (
+                      <li key={item}>• {item}</li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
           ))}
         </div>
       </Container>

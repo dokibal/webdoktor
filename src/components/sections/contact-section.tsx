@@ -22,8 +22,30 @@ export function ContactSection() {
             Segítek kereteket adni a projektnek.
           </Subheading>
         </div>
-        <div className="rounded-xl border border-border/40 bg-background p-6 shadow-lg backdrop-blur-sm">
-          <ContactForm />
+        <div className="space-y-4">
+          <div className="rounded-xl border border-border/40 bg-background p-6 shadow-lg backdrop-blur-sm">
+            <ContactForm />
+          </div>
+          <div className="text-xs text-muted leading-relaxed">
+            <p className="font-medium text-secondary-foreground">
+              Vagy keress közvetlenül:
+            </p>
+            <p>
+              Telefon:{" "}
+              <a href="tel:+36204224372" className="underline underline-offset-2">
+                +36 20 422 43 72
+              </a>
+            </p>
+            <p>
+              E-mail:{" "}
+              <a
+                href="mailto:doktor.balazs1@gmail.com"
+                className="underline underline-offset-2"
+              >
+                doktor.balazs1@gmail.com
+              </a>
+            </p>
+          </div>
         </div>
       </Container>
     </section>

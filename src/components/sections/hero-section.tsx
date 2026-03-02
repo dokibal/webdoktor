@@ -27,7 +27,7 @@ export function HeroSection() {
 
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
             <Button size="lg">
-              <Link href="#contact">Kérek ajánlatot</Link>
+              <Link href="#contact">Ajánlatot szeretnék kérni</Link>
             </Button>
             <Button variant="ghost" size="lg">
               <Link href="#services">Szolgáltatások megtekintése</Link>
